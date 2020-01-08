@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -24,5 +20,20 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function getTokens()
+    {
+        return view('home.personal-tokens');
+    }
+
+    public function getAuthorizedClients()
+    {
+        return view('home.authorized-clients');
+    }
+
+    public function getClients()
+    {
+        return view('home.personal-clients');
     }
 }

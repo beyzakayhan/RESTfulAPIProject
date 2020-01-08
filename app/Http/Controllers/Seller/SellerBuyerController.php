@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers\Seller;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\ApiController;
 use App\Seller;
 
-class SellerBuyerController extends Controller
+class SellerBuyerController extends ApiController
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -25,6 +30,6 @@ class SellerBuyerController extends Controller
             ->values()
         ;
 
-        return $this->showAll('buyers');
+        return $this->showAll($buyers);
     }
 }
